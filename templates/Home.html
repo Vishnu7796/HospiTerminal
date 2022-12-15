@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="sectionfirst background">
+    <div class="box-main">
+        <div class="firsthalf">
+            <p class="bgtext">Welcome To Hospi-Terminal</p>
+            <br>
+            <p class="smtext1">
+                This website is a well orgainzed collaboratory platform for doctors and patients which makes the entire prescribing process easy for both ends using today's technology. This will help organize your huge medical data for future needs.
+            </p>
+            {% if session['loggedin'] and session['is_doctor'] %}
+
+            <button class="btn big" id="BookAppointment" style="font-weight: 700;" onclick="window.location.href='{{ url_for('Doctor_Portal',Para1='Diagnosis',Para2='Prescription') }}';" >Work Place</button>
+
+            {% elif session['loggedin']%}
+
+            <button class="btn big" id="BookAppointment" style="font-weight: 700;" onclick="window.location.href='{{ url_for('Book') }}';" >Book Appointment</button>
+
+            {% else %}
+            <button class="btn big" id="BookAppointment" style="font-weight: 700;" onclick="window.location.href='{{ url_for('Login') }}';" >Book Appointment</button>
+
+            {% endif %}
+        </div>
+        <div class="secondhalf ">
+            <img src="https://media.gettyimages.com/photos/group-of-doctors-working-together-with-new-hospital-technology-picture-id471940651"
+                alt="#">
+        </div>
+    </div>
+</section>
+<section class="Sec-details">
+    <div class="sectwo smtext">
+        <p>DOCTORS :
+            <br>
+            <br>
+             It eliminates the unrequired process which makes the process less time consuming. Also they can access the previous record history of the patient which can help them diagnose the patient.
+        </p>
+    </div>
+    <div class="sectwo smtext">
+        <p>
+            PATIENT :
+            <br>
+            <br>
+            Medical data will emailed for the further reference of the patients. Easy appointment process which will help save time. Give peace of mind as there is no need to manage the records.
+        </p>
+    </div>
+    <div class="sectwo smtext">
+        <p>BENEFITS :
+            <br>
+            <br>
+            It helps save time and efforts.
+            It saves environment by reducing the paperwork.
+            The data collected can be used to train AI machines.
+            Be A Part Of Revolution.
+        </p>
+    </div>
+</section>
+<section id="Contact">
+    <h1>Contact Us</h1>
+    <div class="form">
+        <form action="#" method="POST">
+            <ul>
+                <li><input class="input" type="text" name="name" placeholder="Name"></li>
+                <li><input class="input" type="text" name="mobno" placeholder="Mobile No"></li>
+                <li><input class="input" name="email" type="email" placeholder="E-Mail"></li>
+                <li><textarea class="input" name="Query" cols="30" row="10" placeholder="Query" ></textarea>
+                </li>
+            </ul>
+            <button type="submit" class="btn submit big" value="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

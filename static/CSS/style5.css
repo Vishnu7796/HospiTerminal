@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: ubuntu;
+}
+
+body {
+   font-family:  ubuntu;
+   margin: 15px 30px;
+   font-size: 18px;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-family: ubuntu;
+}
+
+.recognize{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn{
+    padding: 10px 10px;
+    margin-right: 8%;
+    /* max-width: 200px; */
+    background: #007bff;
+    border: 2px solid #007bff;
+    border-color: #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.4s
+}
+
+.btn:hover{
+    background:white;
+    color: #007bff;
+}
+
+.container{
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+
+}
+
+.main_heading{
+    /* padding: 10px 52px; */
+    margin-right: 8%;
+    max-width: 300px;
+    /* background: #007bff; */
+    /* border: 2px solid #007bff; */
+    /* border-color: #007bff; */
+    /* border-radius: 8px; */
+    /* cursor: pointer; */
+    color: black;
+    transition-duration: 0.4s
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="phone no"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+fieldset{
+    background-color: #fff;
+    border:1px solid #ccc;
+
+}
+
+input[type="submit"]{
+    font-size: large;
+    background-color: #007bff;
+    color: white;
+    padding :12px 20px;
+    border: none;
+    max-width: 200px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    text-align: center;
+}
+
+input[type="submit"]:hover{
+    background-color: #004cff;
+    
+}
+
+td{
+    text-align: center;
+    width: 20%;
+}

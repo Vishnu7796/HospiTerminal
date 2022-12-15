@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/style5.css">
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <h2 class="main_heading">PRESCRIPTION</h2>
+            <hr>
+            <h2 class="">Patient Information</h2>
+
+            <p>Name:  <input type="text" name="name" value="{{session['Pat_name']}}"></p>
+            <p>Age:  <input type="text" name="age" value="{{session['Pat_age']}}"></p>
+
+            <p>Email : <input type="email" name="email" id="email" value="{{session['Pat_email']}}" ></p>
+
+            <p>Symptoms: <input type="text" name="symptoms" value="{{session['Pat_symptoms']}}"></p>
+            <hr>
+            <br>         
+            <div class="recognize"><button class="btn"><a href="/takecommand">Run Speech Recognition</a></button>
+              </div>
+
+
+            <p>Diagnosis: <input type="text" name="advice" value="{{Advice}}" required></p>
+            
+            <p>Prescription : <input type="text" name="prescription" value="{{Prescription}}" required></p>
+
+            {% if records %}
+            <br>
+            <p>Previous Records :</p>
+            <table>
+                <thead style="background-color:rgb(110, 112, 112); height: 40px;">
+                    <tr>
+                    <th>Identity No.</th>
+                    <th>Diagnosis</th>
+                    <th>Symptoms</th>
+                    <th>Prescription</th>
+                    </tr>
+                </thead>
+                <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{record[0]}}</td>
+                    <td>{{record[2]}}</td>
+                    <td>{{record[3]}}</td>
+                    <td>{{record[4]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+            {% endif %}
+
+            <h1 class="submit"> <input type="submit" value="Submit"> </h1>
+        
+        </form>
+        </div>
+    
+</body>
+</html>

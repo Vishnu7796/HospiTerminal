@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ubuntu;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.background{
+    background: url("../Images/Banner-02.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    /* cursor: pointer; */
+    background-color:aliceblue;
+}
+
+.nav ul{
+    display:flex;
+    align-items: center;
+    width: 70%;
+}
+
+.logo{
+    width: 14%;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: right;
+    margin-right: 4px;
+}
+
+.logo img{
+    width: 45%;
+    /* border: 3px solid white; */
+    border-radius: 150px;
+    display: block;
+}
+.title{
+    list-style: none;
+    margin-right: 5%;
+    white-space: nowrap;
+}
+.title h3{
+    color: #007bff;
+    font-weight: 900;
+}
+
+.nav-list{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* margin-left: 5%; */
+    cursor: pointer;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.jump{
+    width: 100px;
+    padding: 13px;
+    display: flex;
+    border: 2px solid aliceblue;
+    justify-content: center;
+}
+
+.active,.jump:hover{
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #007bff;
+}
+
+.secondnav{
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 14px;
+    margin-right: 8%;
+    max-width: 200px;
+    background: #007bff;
+    border: 2px solid #007bff;
+    border-color: #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.4s
+}
+
+.big{
+    font-size: 18px;
+}
+
+.btn:hover{
+    background:white;
+    color: #007bff;
+}
+.sectionfirst{
+    /* width: 100vh; */
+    height: 80vh;
+    
+}
+
+.box-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 85%;
+    height: 75%;
+    margin: auto;
+}
+
+.bgtext{
+    color: #007bff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.smtext{
+    color: #007bff;
+    font-size: 22px
+    /* font-weight: 600; */
+}
+.firsthalf{
+    width: 80%; 
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items:flex-start; 
+}
+
+.secondhalf{
+    display: flex;
+    justify-content: center;
+}
+
+.secondhalf img{
+    max-width: 70%;
+    border: 3px solid white;
+    border-radius: 2px ;
+}
+#BookAppointment{
+    margin-top: 3vh;
+}
+
+.Sec-details{
+    padding: 0vh 5vw;
+    margin: 5vh;
+    display: inline-flex;
+    height: 40vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(200, 200, 200); */
+}
+
+.sectwo{
+    display: flex;
+    min-height: 90%;
+    width: 30%;
+    background: #007bff;
+    margin: 2.5% 2.5%;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    /* box-shadow: 5px 10px #888888; */
+    transition-delay: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    /* font-weight: 500; */
+}
+
+.sectwo:hover{
+    /* border: 4px solid #0050a5; */
+    background: white;
+    color: #007bff;
+    /* border: 2px solid #007bff; */
+    font-weight: 600;
+}
+
+.sectwo p{
+    padding: 15% 10%;
+}
+
+footer{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 10vh;
+    background: #0050a5;
+
+}
+ 
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 590;
+    font-size: 18px;
+    margin: 0px 5%;
+}
+
+h1{
+    color: #007bff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#Contact{
+    background: #eaeded;
+    padding-bottom: 2vh;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+}
+.form ul{
+    list-style: none;
+    width: 100%;
+}
+form{
+    width: 50%;
+}
+.input{
+    width: 100%;
+    margin: 10px;
+    padding: 4px;
+    font-size: 16px;
+}
+.submit{
+    width: 100%;
+    margin: 10px;
+    margin-left: 35%;
+    font-weight: 600;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Hospi-Terminal</title>
+    <link rel="stylesheet" href="../static/CSS/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="navbar">
+            <li class="logo"><img
+                    src="https://p7.hiclipart.com/preview/957/974/456/hospital-logo-clinic-health-care-physician-business.jpg"
+                    alt="logo"></li>
+            <li class="title">
+                <h3 style="margin-left: 0px;">Hospi-Terminal |</h3>
+            </li>
+            <li class="jump {{Home}} nav-list" onclick="window.location.href='{{ url_for('Home') }}';" ><a href="/">Home</a></li>
+    
+            <li class="jump {{About}} nav-list" onclick="window.location.href='{{ url_for('About_Us') }}';" ><a href="/about_us/">About Us</a></li>
+    
+            <li class="jump nav-list" onclick="window.location.href='/#Contact'" ><a href="/#Contact" >Contact Us</a></li>
+    
+            <li class="jump {{Purchase}} nav-list"><a href="#Purchase">Purchase</a></li>
+        </ul>
+        {% if session['loggedin'] %}
+        <div class="secondnav nav-list"><button class="btn" onclick="window.location.href='{{ url_for('Logout') }}';" style="font-weight: 700;">Logout</button></div>
+
+        {% else %}
+        <div class="secondnav nav-list"><button class="btn" onclick="window.location.href='{{ url_for('Login') }}';" style="font-weight: 700;">Login/Sign Up</button></div>
+        
+        {% endif %}
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <a href="#">&copy; 2022 | Hospi-Terminal - All rights reserved</a>
+    </footer>
+
+</body>
+
+</html>

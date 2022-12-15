@@ -1,0 +1,32 @@
+{% extends "Login.html" %}
+{% block content %}
+<form method="POST">
+  <h3 align="center">Sign-Up</h3>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="firstName">Name</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your Name">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="password1">Password</label>
+    <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter the password">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="password2">Password (Confirm)</label>
+    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password">
+  </div>
+<br>
+  <div class="form-group">
+    <label for="password2">Profession</label><br>
+    <input type="radio" id="doctor" name="doctor">   Doctor
+  </div>
+<br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
