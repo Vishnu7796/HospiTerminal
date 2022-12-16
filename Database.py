@@ -3,7 +3,7 @@ import mysql.connector as connector
 class DBHelper:
 
     def __init__(self) :
-        self.con = connector.connect(host = 'localhost',port='3306',user='root',password='#Vishnu697#',database ='record')
+        self.con = connector.connect(host = 'localhost',port='3306',user='root',password='#yourpassword#',database ='record')
         
         query = 'create table if not exists Patient(userId int auto_increment primary key,userName varchar(200), Diagnosis varchar(200),Symptoms varchar(200) ,Prescription varchar(200))'
 
@@ -52,7 +52,7 @@ class DBHelper:
 class tempHelper:
     
     def __init__(self) :
-        self.con = connector.connect(host = 'localhost',port='3306',user='root',password='#Vishnu697#',database ='record')
+        self.con = connector.connect(host = 'localhost',port='3306',user='root',password='#yourpassword#',database ='record')
         
         query = 'create table if not exists Temp(pat_email varchar(200) primary key, Doc_email varchar(200), Pat_Name varchar(200),Symptoms varchar(200))'
 
