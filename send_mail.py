@@ -1,8 +1,8 @@
 from email.message import EmailMessage
 import smtplib
 
-host_name = 'animelove26837@gmail.com'
-password = 'uilkbgbbblhigpor'
+host_name = 'hostmail@gmail.com'
+password = 'hostAccountPassword'
 
 def sendMail(name,age,email,symptoms,prescription,diagnosis):
     smtp = smtplib.SMTP_SSL('smtp.gmail.com',465)
